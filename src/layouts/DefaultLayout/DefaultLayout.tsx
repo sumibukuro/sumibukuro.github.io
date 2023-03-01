@@ -164,13 +164,13 @@ function DefaultLayout({ children, className, style, title, coinEmoji = '💰', 
                 <>
                     <h1 className={classnames(styles.DefaultLayout__Heading, game.settings.bestScore > 0 && game.settings.bestScore < game.score && styles['DefaultLayout__Heading--Shine'])}>{game.title}</h1>
                     {!game.locked && (
-                        <button
+                        <div
                             className={classnames(styles.DefaultLayout__IconButton, styles['DefaultLayout__IconButton--Pause'])}
                             onClick={() => {
                                 game.locked = true
                                 setPaused(true)
                             }}
-                        ></button>
+                        ></div>
                     )}
                     {paused && (
                         <Modal className={styles.DefaultLayout__Pause} caption={t('Pause')} center>
