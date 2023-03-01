@@ -1,0 +1,14 @@
+{
+    "electron": {
+        "mac": {
+            "package": ["zip"]
+        },
+        "android": {}
+    },
+    "meta": {
+        "title": "KARASUZO!",
+        "description": "Get dried squids!",
+        "color": "#059",
+        "host": "sumibukuro.com"
+    }
+}

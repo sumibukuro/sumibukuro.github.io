@@ -1,0 +1,7 @@
+{
+    "extends": ["stylelint-config-recess-order", "stylelint-config-standard-scss", "stylelint-config-prettier-scss"],
+    "rules": {
+        "selector-class-pattern": "^([A-Z][a-z]*(__|--)?)*([A-Z][a-z]*)$"
+    },
+    "ignoreFiles": ["**/node_modules/**"]
+}

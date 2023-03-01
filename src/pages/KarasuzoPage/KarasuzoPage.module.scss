@@ -1,0 +1,50 @@
+.KarasuzoPage {
+    &,
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+    }
+
+    &__Usage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+
+        &__Text {
+            margin: 10px 0;
+            font-weight: bold;
+            line-height: 1.1;
+
+            &--Move {
+                border-bottom: 2px solid #059;
+            }
+
+            &--Squid {
+                border-bottom: 2px solid #c50;
+            }
+
+            &--Banana {
+                border-bottom: 2px solid #cc0;
+            }
+        }
+    }
+
+    &__Copyright {
+        width: 100%;
+        padding-top: 15px;
+        margin-top: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 0.8em;
+        color: #999;
+        text-align: center;
+        border-top: 1px solid #999;
+
+        &__Logo {
+            width: 100px;
+            height: 20px;
+        }
+    }
+}

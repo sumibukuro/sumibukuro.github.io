@@ -1,0 +1,3 @@
+# sumibukuro
+
+- `brew install bundletool`

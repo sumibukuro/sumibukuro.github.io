@@ -1,0 +1,286 @@
+.DefaultLayout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &,
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+        user-select: none;
+    }
+
+    &__Loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 28px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #222;
+
+        &--Splash {
+            animation: fade-out 0.2s ease 2s forwards;
+        }
+
+        &__Logo {
+            width: 250px;
+            opacity: 0;
+            animation: fade-in 0.2s ease forwards;
+        }
+    }
+
+    &__Heading {
+        position: fixed;
+        top: 20vh;
+        left: 50%;
+        margin: 0;
+        font-size: 64px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 0 5px #000;
+        letter-spacing: -0.1em;
+        pointer-events: none;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8, 1);
+        animation: fade-in-heading 0.2s ease forwards;
+
+        &--Shine {
+            text-shadow: 0 0 10px #ff0;
+        }
+    }
+
+    &__SubHeading {
+        position: fixed;
+        top: calc(20vh + 60px);
+        left: 50%;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 0 5px #000;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        animation: fade-in-sub-heading 0.2s ease forwards;
+    }
+
+    &__Screen {
+        canvas {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__BottomButtons {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        display: flex;
+        height: 50px;
+        opacity: 0;
+        transform: translate(-50%, 0);
+        animation: fade-in-bottom-btns 0.2s ease forwards;
+
+        & > * + * {
+            margin-left: 5px;
+        }
+    }
+
+    &__IconButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        padding-bottom: 2px;
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        background-color: rgb(0 0 0 / 0%);
+        border: 0;
+        border-radius: 5px;
+        opacity: 0;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            color: #def;
+        }
+
+        &--Pause {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            opacity: 1;
+
+            &::after,
+            &::before {
+                width: 5px;
+                height: 20px;
+                content: '';
+                background-color: #fff;
+            }
+
+            &::after {
+                margin-left: 5px;
+            }
+        }
+
+        &--Usage {
+            font-size: 38px;
+        }
+
+        &--Shop {
+            padding-top: 4px;
+        }
+
+        &--AppLink {
+            font-size: 32px;
+        }
+
+        &--Settings {
+            font-size: 38px;
+        }
+
+        &--GiftEnabled {
+            box-shadow: 0 0 10px 5px #ff0;
+        }
+    }
+
+    &__Shop,
+    &__Gift {
+        & p {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        & p + p,
+        & div + p,
+        & p + div {
+            margin-top: 15px;
+        }
+
+        & button {
+            height: 50px;
+            padding: 0 15px;
+        }
+    }
+
+    &__PR {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        background-color: #000;
+        transform: translate(-50%, 0);
+
+        &__Image {
+            width: 320px;
+            height: 50px;
+            padding: 5px;
+            color: #fff;
+            background-color: #555;
+        }
+    }
+
+    &__Pause {
+        button {
+            width: 80%;
+            height: 50px;
+        }
+
+        button + button {
+            margin-top: 15px;
+        }
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-heading {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -70%) scale(0.8, 1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.8, 1);
+    }
+}
+
+@keyframes fade-in-sub-heading {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fade-in-bottom-btns {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 65px;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-bottom-btn {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>gh-pages redirect</title>
+        <script>
+            const SEGMENT_COUNT = 0
+            const segments = location.href.substr(location.origin.length + 1).split('/')
+            const repo = segments.slice(0, SEGMENT_COUNT).join('/')
+            const param = segments.slice(SEGMENT_COUNT).join('/')
+            const url = location.origin + '/' + repo + '?ghp=' + encodeURIComponent(param)
+            location.replace(url)
+        </script>
+    </head>
+    <body></body>
+</html>
