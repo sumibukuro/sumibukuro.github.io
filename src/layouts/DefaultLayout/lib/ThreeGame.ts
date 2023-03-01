@@ -78,6 +78,8 @@ class ThreeGame {
         this.background = '#000'
         this.locked = true
         this.frameCount = 0
+
+        // Reset
         this.score = 0
         this.lastTickTime = new Date().getTime()
         this.timeRatio = 1
@@ -151,6 +153,8 @@ class ThreeGame {
 
     // Reset
     reset() {
+        this.lastTickTime = new Date().getTime()
+        this.timeRatio = 1
         this.score = 0
     }
 
