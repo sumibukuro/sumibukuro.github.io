@@ -12,7 +12,7 @@
         "gen_app_icon": "app-icon generate --adaptive-icons --platforms=android --icon=src/static/assets/icon.png --background-icon=src/static/assets/icon.png --foreground-icon=src/static/assets/icon.png",
         "gen_keystore": "keytool -genkey -v -keystore .keystore -alias apprelease -keyalg RSA -validity 10000",
         "lint": "eslint --fix '**/*.{js,jsx,ts,tsx}' && stylelint --fix '**/*.{css,scss,sass}' && prettier --write '**/*.{html,js,jsx,ts,tsx,css,scss,sass}'",
-        "test": "jest --watch --silent",
+        "test": "jest",
         "storybook": "open -a 'Google Chrome' http://localhost:6006/ && start-storybook -p 6006 --no-open",
         "build-storybook": "build-storybook",
         "prepare": "husky install"
