@@ -2,6 +2,8 @@ import { CSSProperties, ReactNode } from 'react'
 import classnames from 'classnames'
 import styles from './HomePage.module.scss'
 import { Link } from 'react-router-dom'
+import CenterLayout from '../../layouts/CenterLayout/CenterLayout'
+import { Helmet } from 'react-helmet'
 
 interface Props {
     children?: ReactNode
@@ -11,10 +13,16 @@ interface Props {
 
 function HomePage({ className, style }: Props): JSX.Element {
     return (
-        <div className={classnames(styles.HomePage, className)} style={style}>
-            <h1>sumibukuro</h1>
-            <Link to="/karasuzo">/karasuzo</Link>
-        </div>
+        <>
+            <Helmet>
+                <title>sumibukuro - Squid games!</title>
+            </Helmet>
+            <CenterLayout className={classnames(styles.HomePage, className)} style={style}>
+                <h1>sumibukuro</h1>
+                <p>Squid games!</p>
+                <Link to="/karasuzo">/karasuzo</Link>
+            </CenterLayout>
+        </>
     )
 }
 

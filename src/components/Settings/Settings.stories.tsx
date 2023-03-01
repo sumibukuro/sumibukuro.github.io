@@ -5,13 +5,13 @@ import Settings from './Settings'
 import ThreeGame from '../../layouts/DefaultLayout/lib/ThreeGame'
 
 export default {
-  title: 'Settings',
-  component: Settings,
+    title: 'Settings',
+    component: Settings,
 } as ComponentMeta<typeof Settings>
 const Template: ComponentStory<typeof Settings> = (args) => <Settings {...args}>children</Settings>
 
 export const Default = Template.bind({})
 Default.args = {
-  game: new ThreeGame(),
-  onClose: action('onClose()'),
+    game: new ThreeGame(),
+    onClose: action('onClose()'),
 }
