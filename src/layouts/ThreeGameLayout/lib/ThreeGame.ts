@@ -76,12 +76,12 @@ class ThreeGame {
         this.framerate = 2
         this.gameScene = location.protocol.match(/^https:/) ? SCENE.SPLASH : SCENE.HOME
         this.background = '#000'
-        this.locked = true
         this.frameCount = 0
 
         // Reset
-        this.score = 0
+        this.locked = true
         this.lastTickTime = new Date().getTime()
+        this.score = 0
         this.timeRatio = 1
 
         // Settings
@@ -153,7 +153,7 @@ class ThreeGame {
 
     // Reset
     reset() {
-        this.lastTickTime = new Date().getTime()
+        this.setLocked(false)
         this.timeRatio = 1
         this.score = 0
     }
@@ -307,6 +307,14 @@ class ThreeGame {
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     protected updateSkinColor(skinColor: string) {}
+
+    // Set
+    setLocked(locked: boolean) {
+        this.locked = locked
+        if (!locked) {
+            this.lastTickTime = new Date().getTime()
+        }
+    }
 }
 
 export default ThreeGame

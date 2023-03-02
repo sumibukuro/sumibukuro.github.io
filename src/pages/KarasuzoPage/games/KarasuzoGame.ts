@@ -127,7 +127,7 @@ class KarasuzoGame extends ThreeGame {
 
         // Unlock
         this.onScore(this.score)
-        this.locked = false
+        this.setLocked(false)
     }
 
     // Tick
@@ -189,7 +189,7 @@ class KarasuzoGame extends ThreeGame {
     }
 
     die() {
-        this.locked = true
+        this.setLocked(true)
         this.karasuzoku.position.set(this.karasuzoku.position.x + 0.8, 0.2, 0)
         this.karasuzoku.rotation.set(-Math.PI / 4, 0, Math.PI / 2)
         this.saveSettings({

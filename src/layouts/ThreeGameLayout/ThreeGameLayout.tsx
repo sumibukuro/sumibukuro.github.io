@@ -167,7 +167,7 @@ function ThreeGameLayout({ children, className, style, title, coinEmoji = '💰'
                         <div
                             className={classnames(styles.ThreeGameLayout__IconButton, styles['ThreeGameLayout__IconButton--Pause'])}
                             onClick={() => {
-                                game.locked = true
+                                game.setLocked(true)
                                 setPaused(true)
                             }}
                         ></div>
@@ -176,7 +176,7 @@ function ThreeGameLayout({ children, className, style, title, coinEmoji = '💰'
                         <Modal className={styles.ThreeGameLayout__Pause} caption={t('Pause')} center>
                             <button
                                 onClick={() => {
-                                    game.locked = false
+                                    game.setLocked(false)
                                     setPaused(false)
                                 }}
                             >
