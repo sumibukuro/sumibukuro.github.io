@@ -36,6 +36,8 @@
         &__Logo {
             width: 250px;
             opacity: 0;
+            fill: #fff;
+            stroke: #fff;
             animation: fade-in 0.2s ease forwards;
         }
     }
