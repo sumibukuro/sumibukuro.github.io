@@ -38,7 +38,7 @@ createRoot(document.querySelector('#root')).render(
             <Route path="/404.html" element={<ErrorPage title="404" />} />
             <Route path="/404" element={<ErrorPage title="404" />} />
             <Route path="/index.html" element={<HomePage />} />
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={inCordova ? <KarasuzoPage /> : <HomePage />} />
             <Route path="*" element={<ErrorPage title="404" />} />
         </Routes>
     </CurrentRouter>,
