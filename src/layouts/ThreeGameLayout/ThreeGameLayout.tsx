@@ -121,12 +121,12 @@ function ThreeGameLayout({ children, className, style, title, coinEmoji = '💰'
                         </div>
                     </div>
                     {isVisibleUsage && (
-                        <Modal className={styles.ThreeGameLayout__Usage} caption={t('How to play')} onClose={() => setIsVisibleUsage(false)}>
+                        <Modal className={classnames(styles.ThreeGameLayout__Modal, styles['ThreeGameLayout__Modal--Usage'])} caption={t('How to play')} onClose={() => setIsVisibleUsage(false)}>
                             {children}
                         </Modal>
                     )}
                     {isVisibleShop && (
-                        <Modal className={styles.ThreeGameLayout__Shop} caption={t('Shop')} onClose={() => setIsVisibleShop(false)} center>
+                        <Modal className={classnames(styles.ThreeGameLayout__Modal, styles['ThreeGameLayout__Modal--Shop'])} caption={t('Shop')} onClose={() => setIsVisibleShop(false)} center>
                             <p>
                                 {coinEmoji} {game.settings.coins}
                             </p>
@@ -138,7 +138,7 @@ function ThreeGameLayout({ children, className, style, title, coinEmoji = '💰'
                         </Modal>
                     )}
                     {isVisibleGift && (
-                        <Modal className={styles.ThreeGameLayout__Gift} caption={t('Gift')} onClose={() => setIsVisibleGift(false)} center>
+                        <Modal className={classnames(styles.ThreeGameLayout__Modal, styles['ThreeGameLayout__Modal--Gift'])} caption={t('Gift')} onClose={() => setIsVisibleGift(false)} center>
                             <p>
                                 {coinEmoji} {game.settings.coins}
                             </p>
@@ -155,7 +155,7 @@ function ThreeGameLayout({ children, className, style, title, coinEmoji = '💰'
                         </Modal>
                     )}
                     {isVisibleSettings && (
-                        <Modal className={styles.ThreeGameLayout__Settings} caption={t('Settings')} onClose={() => setIsVisibleSettings(false)}>
+                        <Modal className={classnames(styles.ThreeGameLayout__Modal, styles['ThreeGameLayout__Modal--Settings'])} caption={t('Settings')} onClose={() => setIsVisibleSettings(false)}>
                             <Settings game={game} onClose={() => setIsVisibleSettings(false)}></Settings>
                         </Modal>
                     )}
@@ -173,7 +173,7 @@ function ThreeGameLayout({ children, className, style, title, coinEmoji = '💰'
                         ></div>
                     )}
                     {paused && (
-                        <Modal className={styles.ThreeGameLayout__Pause} caption={t('Pause')} center>
+                        <Modal className={classnames(styles.ThreeGameLayout__Modal, styles['ThreeGameLayout__Modal--Pause'])} caption={t('Pause')} center>
                             <button
                                 onClick={() => {
                                     game.setLocked(false)
