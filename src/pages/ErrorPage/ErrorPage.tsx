@@ -9,16 +9,19 @@ interface Props {
     children?: ReactNode
     className?: string
     style?: CSSProperties
+    //
+    title?: string
 }
 
-function ErrorPage({ className, style }: Props): JSX.Element {
+function ErrorPage({ className, style, children, title }: Props): JSX.Element {
     return (
         <>
             <Helmet>
-                <title>Error | sumibukuro</title>
+                <title>{title ?? 'Error'} | sumibukuro</title>
             </Helmet>
             <CenterLayout className={classnames(styles.ErrorPage, className)} style={style}>
-                <h1>Error</h1>
+                <h1>{title ?? 'Error'}</h1>
+                {children}
                 <Link to="/">Home</Link>
             </CenterLayout>
         </>

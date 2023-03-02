@@ -35,11 +35,11 @@ createRoot(document.querySelector('#root')).render(
     <CurrentRouter>
         <Routes>
             <Route path="/karasuzo" element={<KarasuzoPage />} />
-            <Route path="/404.html" element={<ErrorPage />} />
-            <Route path="/404" element={<ErrorPage />} />
+            <Route path="/404.html" element={<ErrorPage title="404" />} />
+            <Route path="/404" element={<ErrorPage title="404" />} />
             <Route path="/index.html" element={<HomePage />} />
             <Route path="/" element={<HomePage />} />
-            <Route path="*" element={<ErrorPage />} />
+            <Route path="*" element={<ErrorPage title="404" />} />
         </Routes>
     </CurrentRouter>,
 )
