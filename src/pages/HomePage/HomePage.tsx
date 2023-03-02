@@ -20,7 +20,9 @@ function HomePage({ className, style }: Props): JSX.Element {
             <CenterLayout className={classnames(styles.HomePage, className)} style={style}>
                 <h1>sumibukuro</h1>
                 <p>Squid games!</p>
-                <Link to="/karasuzo">/karasuzo</Link>
+                <div className={styles.HomePage__Links}>
+                    <Link to="/karasuzo">KARASUZO!</Link>
+                </div>
             </CenterLayout>
         </>
     )
