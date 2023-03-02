@@ -1,7 +1,7 @@
 import { Vector3, CircleGeometry, Mesh, MeshLambertMaterial, TextureLoader, PlaneGeometry, MeshBasicMaterial, DoubleSide } from 'three'
-import BananaModel from './models/banana.glb'
-import KarasuzokuModel from './models/karasuzoku_stop.glb'
-import SurumeImage from './models/surume.png'
+import BananaModel from '../../../models/banana.glb'
+import KarasuzokuModel from '../../../models/karasuzoku_stop.glb'
+import SurumeImage from '../../../models/surume.png'
 import ThreeGame, { GameOptions } from '../../../layouts/DefaultLayout/lib/ThreeGame'
 
 interface KarasuzoGameOptions extends GameOptions {
