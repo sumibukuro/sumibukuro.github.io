@@ -2,7 +2,7 @@ import { CSSProperties, ReactNode, useCallback, useMemo } from 'react'
 import classnames from 'classnames'
 import styles from './Settings.module.scss'
 import { useTranslation } from 'react-i18next'
-import ThreeGame from '../../layouts/DefaultLayout/lib/ThreeGame'
+import ThreeGame from '../../layouts/ThreeGameLayout/lib/ThreeGame'
 import './Settings.i18n'
 
 interface Props {

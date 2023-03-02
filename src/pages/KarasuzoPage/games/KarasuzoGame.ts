@@ -2,7 +2,7 @@ import { Vector3, CircleGeometry, Mesh, MeshLambertMaterial, TextureLoader, Plan
 import BananaModel from '../../../models/banana.glb'
 import KarasuzokuModel from '../../../models/karasuzoku_stop.glb'
 import SurumeImage from '../../../models/surume.png'
-import ThreeGame, { GameOptions } from '../../../layouts/DefaultLayout/lib/ThreeGame'
+import ThreeGame, { GameOptions } from '../../../layouts/ThreeGameLayout/lib/ThreeGame'
 
 interface KarasuzoGameOptions extends GameOptions {
     onScore: (score: number) => void

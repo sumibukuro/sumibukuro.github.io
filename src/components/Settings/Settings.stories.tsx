@@ -2,7 +2,7 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import Settings from './Settings'
-import ThreeGame from '../../layouts/DefaultLayout/lib/ThreeGame'
+import ThreeGame from '../../layouts/ThreeGameLayout/lib/ThreeGame'
 
 export default {
     title: 'Settings',

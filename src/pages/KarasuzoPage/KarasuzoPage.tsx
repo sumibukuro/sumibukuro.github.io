@@ -1,10 +1,10 @@
 import { CSSProperties, ReactNode, useCallback, useState } from 'react'
 import classnames from 'classnames'
 import styles from './KarasuzoPage.module.scss'
-import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout'
+import ThreeGameLayout from '../../layouts/ThreeGameLayout/ThreeGameLayout'
 import KarasuzoGame from './games/KarasuzoGame'
 import useForceUpdate from 'use-force-update'
-import { SCENE } from '../../layouts/DefaultLayout/lib/ThreeGame'
+import { SCENE } from '../../layouts/ThreeGameLayout/lib/ThreeGame'
 import { useTranslation } from 'react-i18next'
 import Logo from '../../components/Logo/Logo.svg'
 import './KarasuzoPage.i18n'
@@ -54,7 +54,7 @@ function KarasuzoPage({ className, style }: Props): JSX.Element {
             <Helmet>
                 <title>{title}</title>
             </Helmet>
-            <DefaultLayout className={classnames(styles.KarasuzoPage, className)} style={style} title="KARASUZO!" coinEmoji="🦑" game={game} onReady={onReady}>
+            <ThreeGameLayout className={classnames(styles.KarasuzoPage, className)} style={style} title="KARASUZO!" coinEmoji="🦑" game={game} onReady={onReady}>
                 <div className={styles.KarasuzoPage__Usage}>
                     <p className={classnames(styles.KarasuzoPage__Usage__Text, styles['KarasuzoPage__Usage__Text--Move'])}>👆 {t('Move to tapped location')} 💨</p>
                     <p className={classnames(styles.KarasuzoPage__Usage__Text, styles['KarasuzoPage__Usage__Text--Squid'])}>🦑 {t('Get dried squids!')} 👌</p>
@@ -73,7 +73,7 @@ function KarasuzoPage({ className, style }: Props): JSX.Element {
                     Character Design:
                     <span>@moronimae</span>
                 </div>
-            </DefaultLayout>
+            </ThreeGameLayout>
         </>
     )
 }
