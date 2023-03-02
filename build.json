@@ -9,6 +9,10 @@
         "title": "KARASUZO!",
         "description": "Get dried squids!",
         "color": "#059",
-        "host": "sumibukuro.com"
+        "host": "sumibukuro.com",
+        "appId": "com.shinwajushi.karasuzo",
+        "authorEmail": "support@shinwajushi.com",
+        "authorUrl": "https://shinwajushi.com",
+        "authorName": "Shinwajushi"
     }
 }
